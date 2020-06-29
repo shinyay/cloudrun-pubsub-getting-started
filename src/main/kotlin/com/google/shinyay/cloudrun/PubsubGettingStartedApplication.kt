@@ -7,5 +7,6 @@ import org.springframework.boot.runApplication
 class PubsubGettingStartedApplication
 
 fun main(args: Array<String>) {
+	System.setProperty("server.port", System.getenv().getOrDefault("PORT", "8080"))
 	runApplication<PubsubGettingStartedApplication>(*args)
 }
